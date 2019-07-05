@@ -13,32 +13,27 @@ export class Home extends Component {
 
     this.onAssigneeChange = (event) => {
       if (event.assignee) {
-        fetch(`/tasks/${event.id}/state`, {
+        fetch(`http://taskmaster-dev.us-west-2.elasticbeanstalk.com/tasks/${event.id}/state`, {
           mode: 'cors', 
-          method: 'put', 
+          method: 'PUT', 
           headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
-          }, 
-          credentials: 'same-origin'
-        });
+          }
+        }).then(result => this.fetchData())
+        .catch(error => this.fetchData());;
       } else {
         let username = prompt('Enter a name to assign task to:');
-        fetch(`/tasks/${event.id}/assign/${username}`, {
+        fetch(`http://taskmaster-dev.us-west-2.elasticbeanstalk.com/tasks/${event.id}/assign/${username}`, {
           mode: 'cors', 
-          method: 'put', 
-          headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-          }, 
-          credentials: 'same-origin'
-        });
+          method: 'PUT', 
+        }).then(result => this.fetchData())
+        .catch(error => this.fetchData());
       }
-      this.fetchData();
     }
 
     this.fetchData = () => {
-      fetch(`/tasks`, {
+      fetch(`http://taskmaster-dev.us-west-2.elasticbeanstalk.com/tasks`, {
         mode: 'cors', 
         method: 'GET', 
         headers: {
