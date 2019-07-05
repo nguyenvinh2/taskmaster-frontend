@@ -37,3 +37,7 @@ ul {
 h1 {
   text-align: center;
 }
+
+.description {
+  font-size: 25px;
+}

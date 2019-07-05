@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-const domain = 'http://taskmaster-dev.us-west-2.elasticbeanstalk.com/';
-
 export class Item extends Component {
 
   constructor(props) {
@@ -20,12 +18,12 @@ export class Item extends Component {
     return (
       <li key={this.props.details.key}>
         <details className="details">
-          <p>{this.props.details.description}</p>
+          <p className="description">{this.props.details.description}</p>
           <summary className="summary">
               <p>{this.props.details.id}</p>
               <p>{this.props.details.title}</p>
               {condition}
-              <button>{this.props.details.status}</button>
+              <button onClick={() => this.props.buttonHandler(this.props.details)}>{this.props.details.status}</button>
           </summary>
         </details>
       </li>
