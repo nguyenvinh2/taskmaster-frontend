@@ -1,0 +1,43 @@
+.details {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.summary {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  background-color: lightgray;
+}
+
+.summary p, .summary form, .summary button {
+  width: 20%;
+  margin: auto;
+  text-align: center;
+  font-size: 20px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+
+#header > summary::-webkit-details-marker {
+  color: lightgray;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.header {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+h1 {
+  text-align: center;
+}
+
+.description {
+  font-size: 25px;
+}
