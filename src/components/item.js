@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { ImageForm } from './file';
 
 export class Item extends Component {
 
@@ -24,6 +25,7 @@ export class Item extends Component {
               <p>{this.props.details.title}</p>
               {condition}
               <button onClick={() => this.props.buttonHandler(this.props.details)}>{this.props.details.status}</button>
+              <ImageForm taskId={this.props.details.id} />
           </summary>
         </details>
       </li>
