@@ -1,7 +1,7 @@
 # taskmaster-frontend
 
 Front-End
-http://taskmaster-front.s3-website-us-west-2.amazonaws.com/
+http://taskmaster-interface.s3-website-us-west-2.amazonaws.com/
 
 Back-End
 http://taskmaster-dev.us-west-2.elasticbeanstalk.com/tasks/
