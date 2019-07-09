@@ -12,16 +12,15 @@
   margin-top: 25px;
 }
 
-.summary p, .summary form, .summary button, .summary div {
+.summary p, .summary form, .summary button, .summary div, .summary form {
   width: 20%;
   margin: auto;
   text-align: center;
   font-size: 20px;
 }
 
-.summary div form {
-  display: flex;
-  justify-content: center;
+#upload {
+  width: 100%;
 }
 
 ul {

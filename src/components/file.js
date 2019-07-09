@@ -12,17 +12,18 @@ export class ImageForm extends Component {
     let image;
     if(this.props.taskUrl) {
       image = 
-      <div width="400px">
+      <div>
         <img src={this.props.taskUrl} alt="Task" height="50px" width="50px"/>
       </div>
     } else {
       image =   
-      <div>   
         <form action={this.state.api} method="POST" encType="multipart/form-data">
           <input id="file" name="file" type="file" />
+          <div id="upload">
+
           <input type="submit" value="Upload"/>
+          </div>
         </form> 
-      </div>
     }
     return (
       <Fragment>
