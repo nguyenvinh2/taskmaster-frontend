@@ -71,6 +71,7 @@ export class Home extends Component {
             <p>Title</p>
             <p>Assigned To</p>
             <p>Status</p>
+            <p>Image</p>
           </summary>
         </details>
       </li>

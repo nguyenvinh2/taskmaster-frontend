@@ -25,7 +25,7 @@ export class Item extends Component {
               <p>{this.props.details.title}</p>
               {condition}
               <button onClick={() => this.props.buttonHandler(this.props.details)}>{this.props.details.status}</button>
-              <ImageForm taskId={this.props.details.id} />
+              <ImageForm taskId={this.props.details.id} taskUrl={this.props.details.fileLocation}/>
           </summary>
         </details>
       </li>

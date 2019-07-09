@@ -9,13 +9,19 @@
   display: flex;
   justify-content: flex-start;
   background-color: lightgray;
+  margin-top: 25px;
 }
 
-.summary p, .summary form, .summary button {
+.summary p, .summary form, .summary button, .summary div {
   width: 20%;
   margin: auto;
   text-align: center;
   font-size: 20px;
+}
+
+.summary div form {
+  display: flex;
+  justify-content: center;
 }
 
 ul {
