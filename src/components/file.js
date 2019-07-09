@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
 export class ImageForm extends Component {
   
@@ -9,12 +9,26 @@ export class ImageForm extends Component {
     }
   }
   render() {
+    let image;
+    if(this.props.taskUrl) {
+      image = 
+      <div>
+        <img src={this.props.taskUrl} alt="Task" height="50px" width="50px"/>
+      </div>
+    } else {
+      image =   
+        <form action={this.state.api} method="POST" encType="multipart/form-data">
+          <input id="file" name="file" type="file" />
+          <div id="upload">
+
+          <input type="submit" value="Upload"/>
+          </div>
+        </form> 
+    }
     return (
-      <form action={this.state.api} method="POST" encType="multipart/form-data">
-        <label for="file">Add Image</label>
-        <input id="file" name="file" type="file" />
-        <button>Upload</button>
-      </form> 
+      <Fragment>
+        {image}
+      </Fragment>
     );
   }
 }
